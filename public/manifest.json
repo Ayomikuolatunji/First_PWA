@@ -42,5 +42,6 @@
   "display":"standalone",
   "orientations":"portrait-primary",
   "theme_color":"",
-  "background_color":""
+  "background_color":"",
+  "description":"Building a pwa app"
 }
