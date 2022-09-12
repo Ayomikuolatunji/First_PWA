@@ -1,0 +1,46 @@
+{
+  "name": "Instagram",
+  "short_name": "PWA",
+  "icons": [
+    {
+      "src": "/src/images/icons/app-icon-48x48png",
+      "type": "image/png",
+      "size": "48x48"
+    },
+    {
+      "src": "/src/images/icons/app-icon-96x96png",
+      "type": "image/png",
+      "size": "96x96"
+    },
+    {
+      "src": "/src/images/icons/app-icon-144x144png",
+      "type": "image/png",
+      "size": "144x144"
+    },
+    {
+      "src": "/src/images/icons/app-icon-384x384png",
+      "type": "image/png",
+      "size": "384x384"
+    },
+    {
+      "src": "/src/images/icons/app-icon-512x512png",
+      "type": "image/png",
+      "size": "512x512"
+    },
+    {
+      "src": "/src/images/icons/app-icon-256x256png",
+      "type": "image/png",
+      "size": "256x256"
+    },{
+        "src":"./src/images/icons/app-icon-192x192.png",
+        "type":"image/png",
+        "size":"192x192" 
+    }
+  ],
+  "start_url":"/indexhtml",
+  "scope":".",
+  "display":"standalone",
+  "orientations":"portrait-primary",
+  "theme_color":"",
+  "background_color":""
+}
