@@ -12,7 +12,13 @@ self.addEventListener("install", function (event) {
           "./src/js/feed.js",
           "./src/js/promise.js",
           "./src/js/fetch.js",
-          "./src/js/material.min.js"
+          "./src/js/material.min.js",
+          "./src/css/app.css",
+          "./src/css/feed.css",
+          "./src/css/help.css",
+          "./src/images/main-image.jpg",
+          "https://fonts.googleapis.com/css?family=Roboto:400,700",
+          "https://fonts.googleapis.com/icon?family=Material+Icons"
         ]);
       })
       .catch((error) => {
