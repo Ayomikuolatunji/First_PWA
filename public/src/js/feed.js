@@ -3,11 +3,19 @@ var createPostArea = document.querySelector('#create-post');
 var closeCreatePostModalButton = document.querySelector('#close-create-post-modal-btn');
 var sharedMomentsArea = document.querySelector('#shared-moments');
 
+const fetchData = async=()=>{
+  fetch("https://jsonplaceholder.typicode.com/posts")
+  .then(res=>res.json())
+  .then(data =>console.log(data.clone()))
+  .catch(err=>console.log(err))
+}
+
+
+
 function openCreatePostModal() {
   createPostArea.style.display = 'block';
   if (deferredPrompt) {
     deferredPrompt.prompt();
-
     deferredPrompt.userChoice.then(function(choiceResult) {
       console.log(choiceResult.outcome);
 
@@ -17,10 +25,11 @@ function openCreatePostModal() {
         console.log('User added to home screen');
       }
     });
-
     deferredPrompt = null;
   }
 }
+
+fetchData()
 
 function closeCreatePostModal() {
   createPostArea.style.display = 'none';
@@ -29,6 +38,7 @@ function closeCreatePostModal() {
 shareImageButton.addEventListener('click', openCreatePostModal);
 
 closeCreatePostModalButton.addEventListener('click', closeCreatePostModal);
+
 
 function createCard() {
   var cardWrapper = document.createElement('div');
