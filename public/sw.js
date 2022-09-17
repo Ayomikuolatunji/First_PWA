@@ -5,7 +5,15 @@ self.addEventListener("install", function (event) {
       .open("static")
       .then(function (cache) {
         console.log("[Cache all static assests]");
-        cache.add("./src/js/app.js");
+        cache.addAll([
+          "/",
+          "./index.html",
+          "./src/js/app.js",
+          "./src/js/feed.js",
+          "./src/js/promise.js",
+          "./src/js/fetch.js",
+          "./src/js/material.min.js"
+        ]);
       })
       .catch((error) => {
         console.log(error);
@@ -29,6 +37,8 @@ self.addEventListener("fetch", function (event) {
           return fetch(event.request);
         }
       })
-      .catch((error) => {})
+      .catch((error) => {
+        console.log(error);
+      })
   );
 });
