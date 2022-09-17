@@ -26,7 +26,7 @@ self.addEventListener("fetch", function (event) {
         if (res) {
           return res;
         } else {
-          return fatch(event.request);
+          return fetch(event.request);
         }
       })
       .catch((error) => {})
